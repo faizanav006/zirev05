@@ -1,0 +1,3256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zeen Insurance — Independent insurance brokers serving clients across the US. Custom-tailored coverage for auto, home, business, RV, marine, motorcycle, group, and travel insurance. Local. Trusted. Fast quotes.">
+<meta name="keywords" content="insurance broker, auto insurance, home insurance, business insurance, group insurance, independent insurance agency, affordable insurance quotes">
+<meta property="og:title" content="Zeen Insurance | Protection That Revolves Around You">
+<meta property="og:description" content="Independent insurance brokers with decades of experience. Get custom coverage for every stage of life.">
+<meta property="og:type" content="website">
+<title>Zeen Insurance | Protection That Revolves Around You</title>
+
+<!-- Schema.org structured data for AI/SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Zeen Insurance Services",
+  "description": "Independent insurance brokerage serving clients across the United States, offering custom-tailored coverage including auto, home, business, recreational, group, and travel insurance.",
+  "telephone": "+1-571-535-8699",
+  "address": {"@type": "PostalAddress", "addressCountry": "US"},
+  "sameAs": ["https://facebook.com", "https://instagram.com"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Insurance Products",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Auto Insurance"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Home Insurance"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business Insurance"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Group Insurance"}}
+    ]
+  }
+}
+</script>
+
+<!-- FAQ Schema for AI search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "What types of insurance does Zeen offer?","acceptedAnswer": {"@type": "Answer","text": "Zeen offers auto, home, business, recreational (RV, boat, motorcycle, ATV), group, travel, and life insurance."}},
+    {"@type": "Question","name": "How do I get an insurance quote?","acceptedAnswer": {"@type": "Answer","text": "You can get a free quote online in minutes using our quote form, or call us at 1-571-535-8699."}},
+    {"@type": "Question","name": "Is Zeen an independent insurance broker?","acceptedAnswer": {"@type": "Answer","text": "Yes, we are fully independent and work with dozens of top insurance carriers to find you the best coverage at the best price."}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #050d1a;
+    --navy-2: #0a1628;
+    --navy-3: #0f2040;
+    --teal: #1a5bb5;
+    --teal-dim: rgba(26,91,181,0.12);
+    --teal-glow: rgba(26,91,181,0.35);
+    --amber: #f5a623;
+    --amber-dim: rgba(245,166,35,0.15);
+    --white: #f0f6ff;
+    --white-dim: rgba(240,246,255,0.08);
+    --white-mid: rgba(240,246,255,0.55);
+    --glass: rgba(10,22,40,0.7);
+    --glass-light: rgba(255,255,255,0.05);
+    --border: rgba(26,91,181,0.22);
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 16px;
+    --radius-lg: 24px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ─── NOISE TEXTURE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  /* ─── BACKGROUND MESH ─── */
+  .bg-mesh {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(26,91,181,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 80%, rgba(0,80,160,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(5,13,26,0) 0%, var(--navy) 100%);
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    height: 68px;
+    background: #060e1c;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-icon {
+    width: 38px; height: 38px;
+    background: linear-gradient(135deg, var(--teal), #1e4d8c);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 0 20px var(--teal-glow);
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+
+  .nav-logo-text span { color: var(--teal); }
+
+  .nav-links {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+  }
+
+  .nav-links a {
+    color: var(--white-mid);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover { color: var(--teal); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  .nav-phone {
+    color: var(--teal);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.25s;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary {
+    background: var(--teal);
+    color: var(--navy);
+    box-shadow: 0 4px 20px var(--teal-glow);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--teal-glow);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--teal);
+    border: 1.5px solid var(--teal);
+  }
+
+  .btn-outline:hover {
+    background: var(--teal-dim);
+    transform: translateY(-2px);
+  }
+
+  .btn-amber {
+    background: var(--amber);
+    color: var(--navy);
+    font-weight: 700;
+    box-shadow: 0 4px 20px rgba(245,166,35,0.3);
+  }
+
+  .btn-amber:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(245,166,35,0.4);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    background: #060e1c !important;
+    z-index: 9999;
+    padding: 1rem 5% 2rem;
+    border-bottom: 2px solid var(--border);
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 20px 60px #000;
+    isolation: isolate;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    color: #d0dff5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: color 0.2s, padding-left 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-menu a:last-child { border-bottom: none; }
+
+  .mobile-menu a:hover, .mobile-menu a:active {
+    color: var(--teal);
+    padding-left: 6px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 120px 5% 80px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.18;
+    filter: saturate(0.4) brightness(0.6);
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(5,13,26,0.95) 0%, rgba(5,13,26,0.6) 50%, rgba(5,13,26,0.85) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: var(--teal-dim);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--teal);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.4rem;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero h1 .accent { color: var(--teal); }
+  .hero h1 .accent-amber { color: var(--amber); }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: var(--white-mid);
+    margin-bottom: 2.5rem;
+    max-width: 520px;
+    font-weight: 300;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+
+  .trust-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--white-mid);
+    font-weight: 400;
+  }
+
+  .trust-pill .icon {
+    width: 28px; height: 28px;
+    background: var(--teal-dim);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  /* QUICK QUOTE WIDGET */
+  .quote-widget {
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    width: min(380px, 100%);
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(26,91,181,0.08) inset;
+    animation: fadeUp 0.8s 0.3s ease both;
+    flex-shrink: 0;
+  }
+
+  .quote-widget h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .quote-widget h3 span { color: var(--teal); }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  .form-group select,
+  .form-group input {
+    width: 100%;
+    padding: 11px 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group select:focus,
+  .form-group input:focus {
+    border-color: var(--teal);
+    background: var(--teal-dim);
+  }
+
+  .form-group select option { background: var(--navy-2); }
+
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--teal);
+    pointer-events: none;
+    font-size: 0.8rem;
+  }
+
+  .hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  /* ─── SECTION STYLES ─── */
+  section { position: relative; z-index: 1; }
+
+  .section-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    color: var(--white-mid);
+    font-size: 1.05rem;
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  /* ─── PILLARS ─── */
+  .pillars {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .pillar-card {
+    background: var(--glass-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.8rem;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--teal);
+    background: var(--teal-dim);
+  }
+
+  .pillar-card:hover::before { opacity: 1; }
+
+  .pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .pillar-card h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.02em;
+  }
+
+  .pillar-card p {
+    color: var(--white-mid);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* ─── COVERAGE GRID ─── */
+  .coverage {
+    padding: 100px 0;
+  }
+
+  .coverage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--white-dim);
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid var(--border);
+  }
+
+  .tab {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--white-mid);
+    transition: all 0.25s;
+    font-family: var(--font-body);
+    letter-spacing: 0.01em;
+  }
+
+  .tab.active {
+    background: var(--teal);
+    color: var(--navy);
+  }
+
+  .coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .coverage-panel { display: none; }
+  .coverage-panel.active { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; gap: 1.2rem; }
+
+  /* fallback for browsers without subgrid */
+  @supports not (grid-template-columns: subgrid) {
+    .coverage-panel.active { display: contents; }
+  }
+
+  .cover-card {
+    background: var(--glass-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--teal);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .cover-card:hover {
+    border-color: rgba(26,91,181,0.4);
+    transform: translateY(-4px);
+    background: rgba(26,91,181,0.07);
+  }
+
+  .cover-card:hover::after { transform: scaleX(1); }
+
+  .cover-icon {
+    font-size: 2rem;
+    width: 52px; height: 52px;
+    background: var(--teal-dim);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+
+  .cover-card:hover .cover-icon {
+    background: rgba(26,91,181,0.2);
+  }
+
+  .cover-card h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .cover-card p {
+    color: var(--white-mid);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .cover-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+  }
+
+  /* ─── STATS BANNER ─── */
+  .stats-banner {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(26,91,181,0.08) 0%, rgba(0,80,160,0.08) 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    color: var(--teal);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    color: var(--white-mid);
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  /* ─── HOW IT WORKS ─── */
+  .how {
+    padding: 100px 0;
+    background: var(--navy-2);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: calc(12.5% + 28px);
+    right: calc(12.5% + 28px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--teal), rgba(26,91,181,0.2));
+    z-index: 0;
+  }
+
+  .step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 56px; height: 56px;
+    background: var(--navy);
+    border: 2px solid var(--teal);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--teal);
+    margin: 0 auto 1.2rem;
+    box-shadow: 0 0 20px var(--teal-glow);
+  }
+
+  .step h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .step p {
+    color: var(--white-mid);
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials {
+    padding: 100px 0;
+    overflow: hidden;
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .testi-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+  }
+
+  .testi-track:active { cursor: grabbing; }
+  .testi-track::-webkit-scrollbar { display: none; }
+
+  .testi-card {
+    flex: 0 0 min(380px, 85vw);
+    background: var(--glass-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .testi-card:hover { border-color: var(--teal); }
+
+  .testi-stars { color: var(--amber); font-size: 1rem; letter-spacing: 2px; }
+
+  .testi-text {
+    color: var(--white-mid);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    font-style: italic;
+    font-weight: 300;
+    flex: 1;
+  }
+
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testi-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), #006080);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    color: var(--navy);
+  }
+
+  .testi-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .testi-location {
+    font-size: 0.78rem;
+    color: var(--white-mid);
+  }
+
+  .testi-savings {
+    font-size: 0.78rem;
+    color: var(--teal);
+    font-weight: 600;
+    background: var(--teal-dim);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 2px 10px;
+  }
+
+  /* ─── GROUP INSURANCE ─── */
+  .group-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--navy-3) 0%, var(--navy-2) 100%);
+  }
+
+  .group-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .group-img-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;
+  }
+
+  .group-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.7);
+    transition: transform 0.6s;
+  }
+
+  .group-img-wrap:hover img { transform: scale(1.04); }
+
+  .group-img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26,91,181,0.15), transparent);
+    z-index: 1;
+  }
+
+  .group-badge-float {
+    position: absolute;
+    bottom: 20px; left: 20px;
+    z-index: 2;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .group-badge-float .big { font-size: 1.5rem; font-family: var(--font-display); font-weight: 800; color: var(--teal); }
+  .group-badge-float .small { font-size: 0.78rem; color: var(--white-mid); }
+
+  .group-content .section-title { margin-bottom: 1.2rem; }
+
+  .group-list {
+    list-style: none;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .group-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--white-mid);
+    line-height: 1.6;
+  }
+
+  .group-list li::before {
+    content: '✦';
+    color: var(--teal);
+    font-size: 0.7rem;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  /* ─── NEWS ─── */
+  .news {
+    padding: 100px 0;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .news-card {
+    background: var(--glass-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-card:hover {
+    border-color: var(--teal);
+    transform: translateY(-4px);
+  }
+
+  .news-img {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+
+  .news-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.6);
+    transition: all 0.4s;
+  }
+
+  .news-card:hover .news-img img {
+    filter: saturate(0.9);
+    transform: scale(1.04);
+  }
+
+  .news-body {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .news-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+
+  .news-card h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    flex: 1;
+  }
+
+  .news-date {
+    font-size: 0.78rem;
+    color: var(--white-mid);
+    margin-top: auto;
+  }
+
+  /* ─── FAQ ─── */
+  .faq {
+    padding: 80px 0;
+    background: var(--navy-2);
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .faq-item {
+    background: var(--glass-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .faq-q {
+    padding: 1.2rem 1.4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    user-select: none;
+  }
+
+  .faq-q:hover { color: var(--teal); }
+
+  .faq-arrow {
+    width: 24px; height: 24px;
+    flex-shrink: 0;
+    color: var(--teal);
+    transition: transform 0.3s;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+
+  .faq-a {
+    display: none;
+    padding: 0 1.4rem 1.2rem;
+    color: var(--white-mid);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open { border-color: rgba(26,91,181,0.3); }
+
+  /* ─── CTA STRIP ─── */
+  .cta-strip {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(26,91,181,0.12) 0%, rgba(0,60,120,0.12) 100%);
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .cta-strip .section-title { margin-bottom: 0.8rem; }
+  .cta-strip .section-sub { margin: 0 auto 2rem; }
+
+  .cta-strip-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  /* ─── PARTNERS ─── */
+  .partners {
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .partners-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--white-mid);
+    margin-bottom: 2rem;
+  }
+
+  .partners-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner-chip {
+    padding: 8px 20px;
+    background: var(--glass-light);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--white-mid);
+    letter-spacing: 0.02em;
+    transition: all 0.2s;
+  }
+
+  .partner-chip:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy-2);
+    border-top: 1px solid var(--border);
+    padding: 60px 0 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand p {
+    color: rgba(240,246,255,0.75);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin: 1rem 0;
+    font-weight: 400;
+    max-width: 300px;
+  }
+
+  .footer-col h5 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-col ul a {
+    color: rgba(240,246,255,0.75);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul a:hover { color: var(--teal); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom p {
+    color: rgba(240,246,255,0.65);
+    font-size: 0.8rem;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .social-btn {
+    width: 36px; height: 36px;
+    background: var(--glass-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+
+  .social-btn:hover {
+    background: var(--teal-dim);
+    border-color: var(--teal);
+  }
+
+  /* ─── MOBILE STICKY BAR ─── */
+  .mobile-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    background: rgba(5,13,26,0.97);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    padding: 12px 5%;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-cta-bar .btn { flex: 1; justify-content: center; }
+
+
+  /* ─── MEDICAL BILLING SECTION ─── */
+  .billing-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+  }
+
+  .billing-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .billing-img-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;
+    background: var(--navy-3);
+    flex-shrink: 0;
+  }
+
+  .billing-img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26,91,181,0.12), transparent 60%);
+    z-index: 1;
+  }
+
+
+
+
+  .billing-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    margin: 1.5rem 0;
+  }
+
+  .billing-highlight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--teal-dim);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--white);
+    transition: border-color 0.2s;
+  }
+
+  .billing-highlight:hover { border-color: var(--teal); }
+
+  .billing-highlight .bh-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .billing-who {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .billing-who-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+
+  .billing-who-item:hover {
+    border-color: rgba(26,91,181,0.3);
+    background: var(--teal-dim);
+  }
+
+  .billing-who-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .billing-who-item h5 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    letter-spacing: -0.01em;
+  }
+
+  .billing-who-item p {
+    font-size: 0.8rem;
+    color: var(--white-mid);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 1024px) {
+    .billing-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .billing-img-wrap { order: -1; }
+    .billing-highlights { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .billing-highlights { grid-template-columns: 1fr; }
+  }
+
+
+  /* ─── HEALTH INSURANCE SECTION ─── */
+  .health-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--navy-2) 0%, var(--navy-3) 100%);
+  }
+
+  .health-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .health-img-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;
+    background: var(--navy-3);
+    flex-shrink: 0;
+    order: 2;
+  }
+
+  .health-img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26,91,181,0.1), transparent 60%);
+    z-index: 1;
+  }
+
+  .health-paras {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  .health-para {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 12px 12px 0;
+    padding: 1.2rem 1.4rem;
+    transition: background 0.2s;
+  }
+
+  .health-para:hover { background: var(--teal-dim); }
+
+  .health-para h5 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .health-para p {
+    font-size: 0.88rem;
+    color: rgba(240,246,255,0.72);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .health-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.2rem 0 1.8rem;
+  }
+
+  .health-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: var(--teal-dim);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--white);
+    transition: all 0.2s;
+  }
+
+  .health-chip:hover {
+    border-color: var(--teal);
+    background: rgba(26,91,181,0.18);
+  }
+
+  @media (max-width: 1024px) {
+    .health-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .health-img-wrap { order: -1; }
+  }
+
+
+  /* ─── THEME TOGGLE BUTTON ─── */
+  .theme-toggle {
+    width: 40px; height: 40px;
+    background: var(--white-dim);
+    border: 1.5px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.25s;
+    flex-shrink: 0;
+    color: var(--white);
+  }
+
+  .theme-toggle:hover {
+    background: var(--teal-dim);
+    border-color: var(--teal);
+    transform: rotate(20deg);
+  }
+
+  /* ─── LIGHT THEME OVERRIDES ─── */
+  body.light-theme {
+    background: #f0f4f8;
+    color: #0a1628;
+  }
+
+  body.light-theme .bg-mesh {
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(26,91,181,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 80%, rgba(0,120,200,0.06) 0%, transparent 60%);
+  }
+
+  body.light-theme nav {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(26,91,181,0.2);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  body.light-theme .nav-links a { color: #334155; }
+  body.light-theme .nav-links a:hover { color: #1652a8; }
+  body.light-theme .nav-phone { color: #1652a8; }
+  body.light-theme .theme-toggle {
+    background: rgba(0,0,0,0.05);
+    border-color: rgba(26,91,181,0.25);
+    color: #334155;
+  }
+  body.light-theme .hamburger span { background: #334155; }
+  body.light-theme .nav-logo-text { color: #0a1628; }
+
+  /* ZEEN SVG logo text — navy in light mode */
+  body.light-theme .nav-logo svg text:first-of-type,
+  /* Nav ZEEN text: navy in light mode (handled by JS) */
+  /* Footer ZEEN text: always white — footer bg is always dark navy */
+  body.light-theme #mobile-menu { background-color: #ffffff !important; }
+  body.light-theme #mobile-menu a { color: #334155 !important; border-bottom-color: rgba(0,0,0,0.06) !important; }
+
+  /* ── Light hero: full bright background, no dark overlay ── */
+  body.light-theme .hero {
+    background: linear-gradient(135deg, #e8f0ff 0%, #eef4ff 40%, #f5f8ff 100%);
+  }
+  body.light-theme .hero-bg img {
+    opacity: 0.05;
+    filter: saturate(0.2) brightness(1.2);
+  }
+  /* Kill the dark overlay pseudo-element on hero-bg in light mode */
+  body.light-theme .hero-bg::after {
+    background: linear-gradient(135deg,
+      rgba(230,238,255,0.97) 0%,
+      rgba(232,242,255,0.88) 50%,
+      rgba(240,246,255,0.95) 100%);
+  }
+  body.light-theme .hero h1 { color: #0a1628; }
+  body.light-theme .hero h1 .accent { color: #1652a8; }
+  body.light-theme .hero-sub { color: #334155; font-weight: 400; }
+  body.light-theme .hero-badge {
+    background: rgba(26,91,181,0.12);
+    border-color: rgba(26,91,181,0.35);
+    color: #1245a0;
+  }
+  body.light-theme .hero-badge::before {
+    background: #1652a8;
+    box-shadow: 0 0 6px rgba(0,160,144,0.5);
+  }
+  body.light-theme .trust-pill { color: #334155; }
+  body.light-theme .trust-pill .icon {
+    background: rgba(26,91,181,0.12);
+    border-color: rgba(26,91,181,0.25);
+  }
+
+  body.light-theme .quote-widget {
+    background: #ffffff;
+    border-color: rgba(26,91,181,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(26,91,181,0.08) inset;
+  }
+  body.light-theme .quote-widget h3 { color: #0a1628; }
+  body.light-theme .form-group label { color: #1652a8; }
+  body.light-theme .form-group input,
+  body.light-theme .form-group select {
+    background: #f8fafc;
+    border-color: rgba(26,91,181,0.3);
+    color: #0a1628;
+  }
+  body.light-theme .form-group input::placeholder { color: #94a3b8; }
+  body.light-theme .form-group select option { background: #ffffff; color: #0a1628; }
+  body.light-theme .quote-widget p { color: #64748b; }
+
+  body.light-theme .pillars { background: #ffffff; }
+  body.light-theme .pillar-card {
+    background: #f8fafc;
+    border-color: rgba(26,91,181,0.15);
+  }
+  body.light-theme .pillar-card h3 { color: #0a1628; }
+  body.light-theme .pillar-card p { color: #475569; }
+  body.light-theme .pillar-card:hover { background: rgba(26,91,181,0.08); }
+
+  body.light-theme .coverage { background: #f0f4f8; }
+  body.light-theme .section-title { color: #0a1628; }
+  body.light-theme .section-sub { color: #475569; }
+  body.light-theme .section-label { color: #1652a8; }
+  body.light-theme .cover-card {
+    background: #ffffff;
+    border-color: rgba(26,91,181,0.15);
+    color: #0a1628;
+  }
+  body.light-theme .cover-card h4 { color: #0a1628; }
+  body.light-theme .cover-card p { color: #475569; }
+  body.light-theme .cover-card:hover { background: rgba(26,91,181,0.06); border-color: rgba(26,91,181,0.4); }
+  body.light-theme .cover-icon { background: rgba(26,91,181,0.08); border-color: rgba(26,91,181,0.2); }
+  body.light-theme .tabs { background: rgba(0,0,0,0.04); border-color: rgba(26,91,181,0.2); }
+  body.light-theme .tab { color: #475569; }
+  body.light-theme .tab.active { background: #1a5bb5; color: #ffffff; }
+
+  body.light-theme .stats-banner {
+    background: linear-gradient(135deg, rgba(26,91,181,0.06), rgba(0,80,160,0.04));
+    border-color: rgba(26,91,181,0.15);
+  }
+  body.light-theme .stat-label { color: #475569; }
+
+  body.light-theme .how { background: #ffffff; }
+  body.light-theme .step-num {
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(26,91,181,0.2);
+  }
+  body.light-theme .step h4 { color: #0a1628; }
+  body.light-theme .step p { color: #475569; }
+
+  body.light-theme .testimonials { background: #f0f4f8; }
+  body.light-theme .testi-card {
+    background: #ffffff;
+    border-color: rgba(26,91,181,0.15);
+  }
+  body.light-theme .testi-text { color: #475569; }
+  body.light-theme .testi-name { color: #0a1628; }
+  body.light-theme .testi-location { color: #64748b; }
+
+  body.light-theme .group-section { background: #ffffff; }
+  body.light-theme .group-list li { color: #475569; }
+  body.light-theme .group-badge-float { background: rgba(255,255,255,0.95); }
+  body.light-theme .group-badge-float .small { color: #64748b; }
+
+  body.light-theme .billing-section { background: #f0f4f8; }
+  body.light-theme .health-section { background: #ffffff; }
+  body.light-theme .group-section { background: #f0f4f8; }
+  body.light-theme .group-content .section-sub { color: #475569; }
+  body.light-theme .billing-who-item { background: #f8fafc; border-color: rgba(26,91,181,0.12); }
+  body.light-theme .billing-who-item h5 { color: #0a1628; }
+  body.light-theme .billing-who-item p { color: #475569; }
+  body.light-theme .billing-highlight { background: rgba(26,91,181,0.07); color: #0a1628; }
+  body.light-theme .health-para { background: #f8fafc; border-left-color: #1a5bb5; }
+  body.light-theme .health-para h5 { color: #1652a8; }
+  body.light-theme .health-para p { color: #475569; }
+  body.light-theme .health-chip { background: rgba(26,91,181,0.08); color: #0a1628; }
+
+  body.light-theme .news { background: #f0f4f8; }
+  body.light-theme .news-card { background: #ffffff; border-color: rgba(26,91,181,0.12); }
+  body.light-theme .news-card h4 { color: #0a1628; }
+  body.light-theme .news-date { color: #64748b; }
+
+  body.light-theme .partners { border-color: rgba(26,91,181,0.12); }
+  body.light-theme .partners-label { color: #64748b; }
+  body.light-theme .partner-chip { background: #ffffff; border-color: rgba(26,91,181,0.15); color: #334155; }
+  body.light-theme .partner-chip:hover { border-color: #1a5bb5; color: #1652a8; }
+
+  body.light-theme .faq { background: #ffffff; }
+  body.light-theme .faq-item { background: #f8fafc; border-color: rgba(26,91,181,0.12); }
+  body.light-theme .faq-q { color: #0a1628; }
+  body.light-theme .faq-a { color: #475569; }
+  body.light-theme .faq-item.open { border-color: rgba(26,91,181,0.3); }
+
+  body.light-theme .cta-strip {
+    background: linear-gradient(135deg, rgba(26,91,181,0.08), rgba(0,80,160,0.05));
+    border-color: rgba(26,91,181,0.15);
+  }
+
+  body.light-theme footer { background: #0a1628; }
+  body.light-theme .footer-brand p { color: rgba(240,246,255,0.7); }
+  body.light-theme .footer-col ul a { color: rgba(240,246,255,0.65); }
+  body.light-theme .footer-bottom p { color: rgba(240,246,255,0.5); }
+  body.light-theme .social-btn { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
+
+  body.light-theme .mobile-cta-bar { background: rgba(255,255,255,0.97); border-top-color: rgba(26,91,181,0.2); }
+  body.light-theme #scroll-top { background: #ffffff; border-color: rgba(26,91,181,0.2); }
+
+  body.light-theme .btn-outline { color: #1652a8; border-color: #1a5bb5; }
+  body.light-theme .btn-outline:hover { background: rgba(26,91,181,0.08); }
+
+  /* Smooth theme transition */
+  body, nav, section, footer, .cover-card, .pillar-card, .testi-card,
+  .faq-item, .news-card, .quote-widget, .billing-who-item, .health-para,
+  .partner-chip, .billing-highlight, .health-chip, #mobile-menu {
+    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+  }
+
+  /* ─── SCROLL TO TOP ─── */
+  #scroll-top {
+    position: fixed;
+    bottom: 80px;
+    right: 5%;
+    z-index: 80;
+    width: 44px; height: 44px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    color: var(--teal);
+    font-size: 1.1rem;
+    transition: all 0.2s;
+  }
+
+  #scroll-top:hover { background: var(--teal-dim); border-color: var(--teal); }
+  #scroll-top.visible { display: flex; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .hero-layout { flex-direction: column; gap: 3rem; }
+    .quote-widget { width: 100%; max-width: 500px; }
+    .hero-content { max-width: 100%; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .group-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .group-img-wrap { order: -1; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .steps::before { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links, .nav-phone { display: none; }
+    .hamburger { display: flex; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .coverage-header { flex-direction: column; align-items: flex-start; }
+    .news-grid { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .mobile-cta-bar { display: flex; }
+    body { padding-bottom: 80px; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    #scroll-top { bottom: 100px; }
+  }
+
+  @media (max-width: 480px) {
+    .steps { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .tabs { flex-wrap: wrap; border-radius: var(--radius); }
+  }
+
+  /* ─── GLOW ANIMATION ─── */
+  @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 20px var(--teal-glow); }
+    50% { box-shadow: 0 0 40px rgba(26,91,181,0.5); }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-mesh"></div>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+<a href="#" class="nav-logo" aria-label="Zeen Insurance home" style="text-decoration:none;display:flex;align-items:center;gap:0;">
+    <svg width="180" height="52" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Zeen Insurance logo">
+      <defs>
+        <linearGradient id="globeGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#4da8ff"/>
+          <stop offset="100%" stop-color="#1e4d8c"/>
+        </linearGradient>
+        <linearGradient id="zGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#e8f4ff"/>
+          <stop offset="35%" stop-color="#7ab8ff"/>
+          <stop offset="65%" stop-color="#1a5bb5"/>
+          <stop offset="100%" stop-color="#0f2d5e"/>
+        </linearGradient>
+        <linearGradient id="orbitGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#1a5bb5" stop-opacity="0"/>
+          <stop offset="40%" stop-color="#4da8ff"/>
+          <stop offset="100%" stop-color="#1a5bb5" stop-opacity="0.3"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="1.2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Globe circle outline -->
+      <circle cx="26" cy="26" r="19" stroke="url(#globeGrad)" stroke-width="1.2" fill="none" opacity="0.85"/>
+
+      <!-- Globe grid lines - horizontal -->
+      <ellipse cx="26" cy="26" rx="19" ry="7.5" stroke="url(#globeGrad)" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <ellipse cx="26" cy="19" rx="14" ry="4" stroke="url(#globeGrad)" stroke-width="0.7" fill="none" opacity="0.35"/>
+      <ellipse cx="26" cy="33" rx="14" ry="4" stroke="url(#globeGrad)" stroke-width="0.7" fill="none" opacity="0.35"/>
+
+      <!-- Globe grid lines - vertical meridians -->
+      <ellipse cx="26" cy="26" rx="7" ry="19" stroke="url(#globeGrad)" stroke-width="0.8" fill="none" opacity="0.4"/>
+      <line x1="26" y1="7" x2="26" y2="45" stroke="url(#globeGrad)" stroke-width="0.8" opacity="0.4"/>
+
+      <!-- Globe node dots -->
+      <circle cx="26" cy="7" r="1.8" fill="#1a5bb5" opacity="0.9" filter="url(#glow)"/>
+      <circle cx="45" cy="26" r="1.8" fill="#1a5bb5" opacity="0.9" filter="url(#glow)"/>
+      <circle cx="26" cy="45" r="1.8" fill="#1a5bb5" opacity="0.9" filter="url(#glow)"/>
+      <circle cx="7" cy="26" r="1.8" fill="#1a5bb5" opacity="0.9" filter="url(#glow)"/>
+      <circle cx="39" cy="13" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+      <circle cx="39" cy="39" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+      <circle cx="13" cy="13" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+      <circle cx="13" cy="39" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+
+      <!-- Orbital swoosh ring - diagonal ellipse -->
+      <ellipse cx="26" cy="26" rx="24" ry="9" stroke="url(#orbitGrad)" stroke-width="2.5" fill="none"
+        transform="rotate(-30 26 26)" stroke-linecap="round" opacity="0.95" filter="url(#glow)"/>
+
+      <!-- Z letterform -->
+      <g filter="url(#glow)">
+        <polygon points="17,16 35,16 35,19.5 21.5,32.5 35,32.5 35,36 17,36 17,32.5 30.5,19.5 17,19.5"
+          fill="url(#zGrad)" opacity="0.97"/>
+      </g>
+
+      <!-- ZEEN text -->
+      <text x="54" y="22" font-family="'Playfair Display', Georgia, serif" font-weight="900"
+        font-size="17" letter-spacing="2" fill="#f0f6ff" id="zeen-wordmark">ZEEN</text>
+
+      <!-- INSURANCE subtext -->
+      <text x="54" y="38" font-family="'DM Sans', Arial, sans-serif" font-weight="600"
+        font-size="9.5" letter-spacing="4" fill="#1a5bb5">INSURANCE</text>
+    </svg>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#coverage">Coverage</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#group">Group Plans</a></li>
+    <li><a href="#medical-billing">Medical Billing</a></li>
+    <li><a href="#health-insurance">Health</a></li>
+    <li><a href="#news">Resources</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+
+  <div class="nav-cta">
+    <a href="tel:+15715358699" class="nav-phone" aria-label="Call us">📞 1-571-535-8699</a>
+    <a href="#quote" class="btn btn-primary" style="padding:8px 18px;font-size:0.82rem;white-space:nowrap;">Get Quote</a>
+    <button class="theme-toggle" id="theme-btn" aria-label="Toggle light/dark theme" title="Toggle theme">🌙</button>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="ham-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" style="display:none;position:fixed;top:72px;left:0;right:0;bottom:0;z-index:9999;background-color:#060e1c;overflow-y:auto;">
+  <div style="display:flex;flex-direction:column;padding:0.5rem 6% 3rem;">
+    <a href="#coverage" onclick="closeMobile()" style="color:#d0dff5;text-decoration:none;font-size:1.05rem;font-weight:500;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;">Coverage &amp; Products <span style="color:#1a5bb5;">&#8594;</span></a>
+    <a href="#how" onclick="closeMobile()" style="color:#d0dff5;text-decoration:none;font-size:1.05rem;font-weight:500;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;">How It Works <span style="color:#1a5bb5;">&#8594;</span></a>
+    <a href="#group" onclick="closeMobile()" style="color:#d0dff5;text-decoration:none;font-size:1.05rem;font-weight:500;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;">Group Insurance <span style="color:#1a5bb5;">&#8594;</span></a>
+    <a href="#news" onclick="closeMobile()" style="color:#d0dff5;text-decoration:none;font-size:1.05rem;font-weight:500;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;">News &amp; Resources <span style="color:#1a5bb5;">&#8594;</span></a>
+    <a href="#medical-billing" onclick="closeMobile()" style="color:#d0dff5;text-decoration:none;font-size:1.05rem;font-weight:500;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;">Medical Billing <span style="color:#1a5bb5;">&#8594;</span></a>
+    <a href="#health-insurance" onclick="closeMobile()" style="color:#d0dff5;text-decoration:none;font-size:1.05rem;font-weight:500;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;">Health Insurance <span style="color:#1a5bb5;">&#8594;</span></a>
+    <a href="#faq" onclick="closeMobile()" style="color:#d0dff5;text-decoration:none;font-size:1.05rem;font-weight:500;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;">FAQ <span style="color:#1a5bb5;">&#8594;</span></a>
+    <a href="tel:+15715358699" style="color:#1a5bb5;text-decoration:none;font-size:1.05rem;font-weight:600;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;gap:10px;">&#128222; 1-571-535-8699</a>
+    <a href="#quote" onclick="closeMobile()" style="margin-top:1.5rem;background:#f5a623;color:#050d1a;font-weight:700;font-size:1rem;padding:14px;border-radius:50px;text-align:center;text-decoration:none;display:block;">Get a Free Quote &#8594;</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="hero" role="banner">
+  <div class="hero-bg" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80&auto=format&fit=crop"
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+    >
+  </div>
+
+  <div class="hero-layout">
+    <div class="hero-content">
+      <div class="hero-badge" aria-label="Independent broker">Independent Broker · 30+ Carriers</div>
+
+      <h1>
+        Protection that<br>
+        <span class="accent">revolves</span> around<br>
+        <span class="accent-amber">you.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Local. Trusted. Independent. We compare dozens of top insurers to find coverage perfectly tailored to your life — home, auto, business, and beyond.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-amber">Get a Free Quote →</a>
+        <a href="tel:+15715358699" class="btn btn-outline">📞 Talk to a Broker</a>
+      </div>
+
+      <div class="hero-trust" role="list">
+        <div class="trust-pill" role="listitem">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <span>Quotes in minutes</span>
+        </div>
+        <div class="trust-pill" role="listitem">
+          <div class="icon" aria-hidden="true">🔒</div>
+          <span>No hidden fees</span>
+        </div>
+        <div class="trust-pill" role="listitem">
+          <div class="icon" aria-hidden="true">🏆</div>
+          <span>Award-winning service</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK QUOTE WIDGET -->
+    <div class="quote-widget" id="quote" role="form" aria-label="Quick insurance quote">
+      <h3>Get Your <span>Free Quote</span></h3>
+
+      <div class="form-group">
+        <label for="ins-type">Insurance Type</label>
+        <div class="select-wrap">
+          <select id="ins-type" name="ins-type">
+            <option value="">Select coverage…</option>
+            <option>Auto Insurance</option>
+            <option>Home Insurance</option>
+            <option>Business Insurance</option>
+            <option>Motorcycle Insurance</option>
+            <option>RV & Motorhome</option>
+            <option>Boat & Marine</option>
+            <option>Travel Insurance</option>
+            <option>Group Insurance</option>
+            <option>Health Insurance</option>
+            <option>Life Insurance</option>
+            <option>Medical Billing Services</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="zip">ZIP / Postal Code</label>
+        <input type="text" id="zip" name="zip" placeholder="e.g. 90210 or 10001" autocomplete="postal-code">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="First & Last Name" autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+      </div>
+
+      <button class="btn btn-amber" id="quote-submit-btn" style="width:100%;justify-content:center;padding:14px;font-size:1rem;" onclick="submitQuote()">
+        Get My Free Quote →
+      </button>
+
+      <div id="quote-feedback" style="display:none;margin-top:0.8rem;padding:10px 14px;border-radius:10px;font-size:0.82rem;text-align:center;font-weight:600;"></div>
+
+      <p style="font-size:0.75rem;color:var(--white-mid);text-align:center;margin-top:0.8rem;">
+        No commitment. No spam. Results in 24 hours.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- PILLARS -->
+<section class="pillars" aria-labelledby="pillars-title">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:0;">
+      <span class="section-label">Why Zeen</span>
+      <h2 class="section-title" id="pillars-title">Built different.<br>Built for you.</h2>
+    </div>
+    <div class="pillars-grid" role="list">
+      <article class="pillar-card" role="listitem">
+        <span class="pillar-icon" aria-hidden="true">🏡</span>
+        <h3>Local Roots</h3>
+        <p>Family-owned, community-driven. Our agents live where you live — and care about protecting what you've built here.</p>
+      </article>
+      <article class="pillar-card" role="listitem">
+        <span class="pillar-icon" aria-hidden="true">🤝</span>
+        <h3>Truly Independent</h3>
+        <p>We work for you, not for any single carrier. That means we compare 30+ top insurers to find your best deal.</p>
+      </article>
+      <article class="pillar-card" role="listitem">
+        <span class="pillar-icon" aria-hidden="true">⚡</span>
+        <h3>Fast & Transparent</h3>
+        <p>Get real quotes in minutes, plain-language explanations, and a broker who picks up the phone when it matters.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="coverage" id="coverage" aria-labelledby="coverage-title">
+  <div class="section-inner">
+    <div class="coverage-header">
+      <div>
+        <span class="section-label">Coverage Options</span>
+        <h2 class="section-title" id="coverage-title">Everything you need,<br>under one roof.</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Coverage categories">
+        <button class="tab active" role="tab" aria-selected="true" onclick="switchTab(this,'personal')">Personal</button>
+        <button class="tab" role="tab" aria-selected="false" onclick="switchTab(this,'business')">Business</button>
+        <button class="tab" role="tab" aria-selected="false" onclick="switchTab(this,'recreation')">Recreation</button>
+        <button class="tab" role="tab" aria-selected="false" onclick="switchTab(this,'services')">Services</button>
+      </div>
+    </div>
+
+    <div class="coverage-grid">
+      <div class="coverage-panel active" id="tab-personal" role="tabpanel">
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🚗</div>
+          <h4>Auto Insurance</h4>
+          <p>Cars, trucks, SUVs & vans. Great rates for great drivers.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏠</div>
+          <h4>Home Insurance</h4>
+          <p>Home, condo, renters & cottage — full protection for every dwelling.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">✈️</div>
+          <h4>Travel Insurance</h4>
+          <p>Protection so you can explore the world with total confidence.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">❤️</div>
+          <h4>Life Insurance</h4>
+          <p>Secure the future of the people who count on you most.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏦</div>
+          <h4>Mortgage Insurance</h4>
+          <p>Keep your home safe and your family protected no matter what.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🐎</div>
+          <h4>Specialty Insurance</h4>
+          <p>Horse, collector car, prize indemnity — if it matters, we cover it.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#health-insurance" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏥</div>
+          <h4>Health Insurance</h4>
+          <p>Individual, family, and short-term health plans — we find the right coverage at the right price for you and your loved ones.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+      </div>
+
+      <div class="coverage-panel" id="tab-business" role="tabpanel">
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏢</div>
+          <h4>Business Insurance</h4>
+          <p>Comprehensive general liability & property for local businesses.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🚛</div>
+          <h4>Commercial Auto</h4>
+          <p>Protect your fleet and keep your business moving.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">👷</div>
+          <h4>Workers' Comp</h4>
+          <p>Keep your team protected and stay fully compliant.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">📋</div>
+          <h4>Bonds & Surety</h4>
+          <p>Contractor and commercial bonds tailored to your industry.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🍕</div>
+          <h4>Restaurant & Hospitality</h4>
+          <p>Industry-specific programs built for food service businesses.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">💳</div>
+          <h4>Payroll Services</h4>
+          <p>Integrated payroll to keep your HR and compliance seamless.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+      </div>
+
+      <div class="coverage-panel" id="tab-recreation" role="tabpanel">
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏍</div>
+          <h4>Motorcycle Insurance</h4>
+          <p>Coverage to get you on the open road with full confidence.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">⛵</div>
+          <h4>Boat & Marine</h4>
+          <p>Hit the waves with ease knowing you're fully covered.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🚐</div>
+          <h4>RV & Motorhome</h4>
+          <p>Travel the country knowing your home-on-wheels is protected.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏍</div>
+          <h4>ATV & Snowmobile</h4>
+          <p>Off-road and on-trail coverage for every season.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🚗</div>
+          <h4>Collector Car</h4>
+          <p>Your prized investment deserves specialty-grade protection.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏕</div>
+          <h4>Cottage & Second Home</h4>
+          <p>Protect your weekend escape with the right seasonal coverage.</p>
+          <span class="cover-link">Get quote →</span>
+        </a>
+      </div>
+
+      <div class="coverage-panel" id="tab-services" role="tabpanel">
+        <a href="#medical-billing" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🧾</div>
+          <h4>Medical Billing</h4>
+          <p>Full-cycle billing management for small practices. 99% first-pass claim rate, daily submissions, all EHR systems supported. Starting at $499/month.</p>
+          <span class="cover-link">Learn more →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">📋</div>
+          <h4>Insurance Credentialing</h4>
+          <p>Get credentialed with major health plans fast. We handle CAQH setup, payer enrollment, and revalidation so you can see patients sooner.</p>
+          <span class="cover-link">Get started →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">✅</div>
+          <h4>Eligibility Verification</h4>
+          <p>Cut claim denials in half with pre-visit eligibility checks. We verify benefits, co-pays, and coverage before the patient walks in.</p>
+          <span class="cover-link">Get started →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🖥️</div>
+          <h4>Virtual Medical Assistant</h4>
+          <p>Dedicated remote staff for scheduling, prior authorizations, patient follow-ups, and admin — without the overhead of in-house hiring.</p>
+          <span class="cover-link">Learn more →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">📜</div>
+          <h4>State Licensure</h4>
+          <p>Get licensed in multiple states to grow your practice reach. We manage the entire application process from start to approval.</p>
+          <span class="cover-link">Get started →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🏗️</div>
+          <h4>Practice Setup</h4>
+          <p>Starting a private practice? We provide a proven blueprint — from NPI registration and payer contracts to billing setup and launch.</p>
+          <span class="cover-link">Learn more →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">🎯</div>
+          <h4>Premium Leads</h4>
+          <p>High-quality, verified leads delivered directly to your sales team to increase conversions. Exclusive territory rights, real-time delivery, CRM-ready.</p>
+          <span class="cover-link">Get leads →</span>
+        </a>
+        <a href="#quote" class="cover-card">
+          <div class="cover-icon" aria-hidden="true">📞</div>
+          <h4>Live Call Transfer</h4>
+          <p>Our trained agents qualify prospects and transfer live calls ready to close. No cold calls — just warm, interested buyers handed directly to you.</p>
+          <span class="cover-link">Get started →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-banner" aria-label="Company statistics">
+  <div class="section-inner">
+    <div class="stats-grid" role="list">
+      <div role="listitem">
+        <div class="stat-num" aria-label="30 plus years">30+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div role="listitem">
+        <div class="stat-num" aria-label="50,000 plus clients">50K+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div role="listitem">
+        <div class="stat-num" aria-label="30 plus carriers">30+</div>
+        <div class="stat-label">Insurance Carriers</div>
+      </div>
+      <div role="listitem">
+        <div class="stat-num" aria-label="4.9 star rating">4.9★</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="section-inner">
+    <div style="text-align:center">
+      <span class="section-label">Simple Process</span>
+      <h2 class="section-title" id="how-title">Your quote in 4 easy steps</h2>
+    </div>
+    <div class="steps" role="list">
+      <div class="step" role="listitem">
+        <div class="step-num" aria-label="Step 1">1</div>
+        <h4>Tell us about yourself</h4>
+        <p>Fill out our quick form — takes less than 3 minutes.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-label="Step 2">2</div>
+        <h4>We compare carriers</h4>
+        <p>Our brokers search 30+ insurers to find your best options.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-label="Step 3">3</div>
+        <h4>Review your options</h4>
+        <p>Get clear, plain-language breakdowns with no fine print surprises.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num" aria-label="Step 4">4</div>
+        <h4>Get covered today</h4>
+        <p>Choose your plan and get your policy documents instantly.</p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials" aria-labelledby="testi-title">
+  <div class="section-inner">
+    <div class="testimonials-header">
+      <span class="section-label">Client Stories</span>
+      <h2 class="section-title" id="testi-title">Real people. Real savings.</h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center;">Thousands of clients trust Zeen to protect what matters most.</p>
+    </div>
+  </div>
+  <div style="padding:0 5%;max-width:1300px;margin:0 auto;">
+    <div class="testi-track" id="testi-track" role="list" aria-label="Customer testimonials">
+      <article class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"After 10 years with the same insurer, I switched everything to Zeen. My annual savings were unbelievable — and the service is night and day."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">P</div>
+          <div>
+            <div class="testi-name">Peter M.</div>
+            <div class="testi-location">Austin, TX</div>
+          </div>
+          <span class="testi-savings">Saved $2,473/yr</span>
+        </div>
+      </article>
+      <article class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"I bundled my home and motorcycle and it basically paid for my motorcycle insurance. I called about ten places — Zeen was the only one that actually listened."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">T</div>
+          <div>
+            <div class="testi-name">Tony R.</div>
+            <div class="testi-location">Denver, CO</div>
+          </div>
+          <span class="testi-savings">Saved $1,100/yr</span>
+        </div>
+      </article>
+      <article class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"They helped us through a difficult cottage claim with such care. The adjuster was fair and compassionate. We couldn't have done it without Zeen."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">A</div>
+          <div>
+            <div class="testi-name">Aline B.</div>
+            <div class="testi-location">Phoenix, AZ</div>
+          </div>
+          <span class="testi-savings">Claim resolved ✓</span>
+        </div>
+      </article>
+      <article class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"Getting business insurance used to be a nightmare. Zeen's team found us better commercial liability coverage for $800 less per year. Zero hassle."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">M</div>
+          <div>
+            <div class="testi-name">Marcus L.</div>
+            <div class="testi-location">Sacramento, CA</div>
+          </div>
+          <span class="testi-savings">Saved $800/yr</span>
+        </div>
+      </article>
+      <article class="testi-card" role="listitem">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"Set up group insurance for our team of 60 in a week. The rates were far better than anything we could find independently. Zeen knows groups."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">S</div>
+          <div>
+            <div class="testi-name">Sarah K.</div>
+            <div class="testi-location">Seattle, WA</div>
+          </div>
+          <span class="testi-savings">Group plan active ✓</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GROUP INSURANCE -->
+<section class="group-section" id="group" aria-labelledby="group-title">
+  <div class="section-inner">
+    <div class="group-inner">
+      <div class="group-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop"
+          alt="Team of professionals collaborating in a bright office"
+          loading="lazy"
+        >
+        <div class="group-badge-float" aria-label="150 plus group partners">
+          <div>
+            <div class="big">150+</div>
+            <div class="small">Group Partners</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group-content">
+        <span class="section-label">Group Insurance</span>
+        <h2 class="section-title" id="group-title">We know<br><span style="color:var(--teal)">groups.</span></h2>
+        <p class="section-sub">Zeen partners with some of the largest employers, unions, and associations to deliver exclusive group rates that individuals simply can't access on their own.</p>
+
+        <ul class="group-list" role="list">
+          <li>Exclusive group rates for employees and union members</li>
+          <li>Bundled home, auto, travel & life in one seamless package</li>
+          <li>Dedicated account managers for HR teams</li>
+          <li>Quick onboarding — new groups active in days, not weeks</li>
+          <li>Works with 150+ organizations across the United States</li>
+        </ul>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#quote" class="btn btn-primary">Find My Group Benefits</a>
+          <a href="#quote" class="btn btn-outline">Set Up Group Insurance</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- MEDICAL BILLING -->
+<section class="billing-section" id="medical-billing" aria-labelledby="billing-title">
+  <div class="section-inner">
+    <div class="billing-inner">
+
+      <!-- IMAGE / ILLUSTRATION SIDE -->
+      <div class="billing-img-wrap">
+        <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;" aria-hidden="true">
+          <defs>
+            <linearGradient id="bgBill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0a1628"/>
+              <stop offset="100%" stop-color="#050d1a"/>
+            </linearGradient>
+            <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0f2040"/>
+              <stop offset="100%" stop-color="#071526"/>
+            </linearGradient>
+            <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2d8ef0"/>
+              <stop offset="100%" stop-color="#1e4d8c"/>
+            </linearGradient>
+            <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#f5a623"/>
+              <stop offset="100%" stop-color="#e8820c"/>
+            </linearGradient>
+            <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1a5bb5"/>
+              <stop offset="100%" stop-color="#2d8ef0"/>
+            </linearGradient>
+            <filter id="softglow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="shadow">
+              <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+            </filter>
+          </defs>
+
+          <!-- Background -->
+          <rect width="480" height="360" fill="url(#bgBill)"/>
+
+          <!-- Grid dots pattern -->
+          <g opacity="0.08">
+            <line x1="0" y1="60" x2="480" y2="60" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="120" x2="480" y2="120" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="180" x2="480" y2="180" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="240" x2="480" y2="240" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="300" x2="480" y2="300" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="80" y1="0" x2="80" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="160" y1="0" x2="160" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="240" y1="0" x2="240" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="320" y1="0" x2="320" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="400" y1="0" x2="400" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+          </g>
+
+          <!-- Ambient teal glow -->
+          <ellipse cx="240" cy="180" rx="200" ry="140" fill="rgba(26,91,181,0.04)"/>
+
+          <!-- Main claim card / document -->
+          <rect x="90" y="40" width="220" height="280" rx="16" fill="url(#cardGrad)" stroke="rgba(26,91,181,0.25)" stroke-width="1.2" filter="url(#shadow)"/>
+
+          <!-- Document header bar -->
+          <rect x="90" y="40" width="220" height="48" rx="16" fill="rgba(26,91,181,0.12)"/>
+          <rect x="90" y="72" width="220" height="16" rx="0" fill="rgba(26,91,181,0.12)"/>
+
+          <!-- Medical cross icon in header -->
+          <rect x="106" y="52" width="16" height="4" rx="2" fill="url(#tealGrad)"/>
+          <rect x="112" y="46" width="4" height="16" rx="2" fill="url(#tealGrad)"/>
+
+          <!-- Header text lines -->
+          <rect x="132" y="50" width="80" height="7" rx="3" fill="rgba(240,246,255,0.7)"/>
+          <rect x="132" y="62" width="50" height="5" rx="2" fill="rgba(26,91,181,0.5)"/>
+
+          <!-- Claim ID badge -->
+          <rect x="270" y="52" width="28" height="14" rx="4" fill="rgba(26,91,181,0.15)" stroke="rgba(26,91,181,0.3)" stroke-width="1"/>
+          <rect x="275" y="57" width="18" height="4" rx="2" fill="rgba(26,91,181,0.6)"/>
+
+          <!-- Line items in document -->
+          <!-- Row 1 -->
+          <rect x="108" y="105" width="40" height="5" rx="2" fill="rgba(240,246,255,0.35)"/>
+          <rect x="108" y="116" width="100" height="5" rx="2" fill="rgba(240,246,255,0.6)"/>
+          <rect x="268" y="108" width="28" height="10" rx="3" fill="rgba(26,91,181,0.2)"/>
+          <rect x="272" y="111" width="20" height="4" rx="2" fill="rgba(26,91,181,0.7)"/>
+          <line x1="108" y1="128" x2="298" y2="128" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+          <!-- Row 2 -->
+          <rect x="108" y="136" width="40" height="5" rx="2" fill="rgba(240,246,255,0.35)"/>
+          <rect x="108" y="147" width="130" height="5" rx="2" fill="rgba(240,246,255,0.6)"/>
+          <rect x="268" y="139" width="28" height="10" rx="3" fill="rgba(26,91,181,0.2)"/>
+          <rect x="272" y="142" width="20" height="4" rx="2" fill="rgba(26,91,181,0.7)"/>
+          <line x1="108" y1="159" x2="298" y2="159" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+          <!-- Row 3 -->
+          <rect x="108" y="167" width="40" height="5" rx="2" fill="rgba(240,246,255,0.35)"/>
+          <rect x="108" y="178" width="90" height="5" rx="2" fill="rgba(240,246,255,0.6)"/>
+          <rect x="268" y="170" width="28" height="10" rx="3" fill="rgba(26,91,181,0.2)"/>
+          <rect x="272" y="173" width="20" height="4" rx="2" fill="rgba(26,91,181,0.7)"/>
+          <line x1="108" y1="190" x2="298" y2="190" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+          <!-- Status section -->
+          <rect x="108" y="202" width="60" height="5" rx="2" fill="rgba(240,246,255,0.3)"/>
+
+          <!-- Progress bars -->
+          <rect x="108" y="214" width="180" height="7" rx="3" fill="rgba(255,255,255,0.06)"/>
+          <rect x="108" y="214" width="178" height="7" rx="3" fill="url(#barGreen)" opacity="0.9"/>
+
+          <rect x="108" y="228" width="180" height="7" rx="3" fill="rgba(255,255,255,0.06)"/>
+          <rect x="108" y="228" width="150" height="7" rx="3" fill="url(#barGreen)" opacity="0.7"/>
+
+          <rect x="108" y="242" width="180" height="7" rx="3" fill="rgba(255,255,255,0.06)"/>
+          <rect x="108" y="242" width="165" height="7" rx="3" fill="url(#barGreen)" opacity="0.8"/>
+
+          <!-- Approval stamp -->
+          <circle cx="200" cy="290" r="28" fill="none" stroke="url(#tealGrad)" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>
+          <circle cx="200" cy="290" r="22" fill="rgba(26,91,181,0.08)" stroke="url(#tealGrad)" stroke-width="1.5" opacity="0.7"/>
+          <text x="200" y="286" font-family="'DM Sans', sans-serif" font-weight="700" font-size="7" fill="#1a5bb5" text-anchor="middle" letter-spacing="1">APPROVED</text>
+          <text x="200" y="297" font-family="'DM Sans', sans-serif" font-weight="700" font-size="9" fill="#2d8ef0" text-anchor="middle">✓</text>
+
+          <!-- Floating mini stat cards on right -->
+          <!-- Card 1: Daily submissions y=40 to y=135 -->
+          <rect x="330" y="40" width="120" height="70" rx="12" fill="url(#cardGrad)" stroke="rgba(245,166,35,0.25)" stroke-width="1.2" filter="url(#shadow)"/>
+          <text x="345" y="62" font-family="'DM Sans', sans-serif" font-weight="300" font-size="8" fill="rgba(240,246,255,0.55)" letter-spacing="0.5">SUBMISSION</text>
+          <text x="345" y="73" font-family="'DM Sans', sans-serif" font-weight="300" font-size="8" fill="rgba(240,246,255,0.55)" letter-spacing="0.5">CYCLE</text>
+          <text x="345" y="98" font-family="Georgia, serif" font-weight="700" font-size="22" fill="url(#amberGrad)">Daily</text>
+
+          <!-- Card 2: 99% First-Pass Rate y=150 to y=230 -->
+          <rect x="330" y="125" width="120" height="75" rx="12" fill="url(#cardGrad)" stroke="rgba(26,91,181,0.3)" stroke-width="1.2" filter="url(#shadow)"/>
+          <text x="345" y="147" font-family="'DM Sans', sans-serif" font-weight="300" font-size="8" fill="rgba(240,246,255,0.55)" letter-spacing="0.5">FIRST-PASS</text>
+          <text x="345" y="158" font-family="'DM Sans', sans-serif" font-weight="300" font-size="8" fill="rgba(240,246,255,0.55)" letter-spacing="0.5">CLAIM RATE</text>
+          <text x="345" y="187" font-family="Georgia, serif" font-weight="700" font-size="26" fill="url(#tealGrad)" filter="url(#softglow)">99%</text>
+
+          <!-- Card 3: Pricing y=215 to y=295 -->
+          <rect x="330" y="215" width="120" height="70" rx="12" fill="url(#cardGrad)" stroke="rgba(26,91,181,0.25)" stroke-width="1.2" filter="url(#shadow)"/>
+          <text x="345" y="237" font-family="'DM Sans', sans-serif" font-weight="300" font-size="8" fill="rgba(240,246,255,0.55)" letter-spacing="0.5">STARTING AT</text>
+          <text x="345" y="262" font-family="Georgia, serif" font-weight="700" font-size="22" fill="url(#tealGrad)">$499</text>
+          <text x="390" y="267" font-family="'DM Sans', sans-serif" font-weight="400" font-size="8" fill="rgba(240,246,255,0.45)">/mo</text>
+
+          <!-- Connecting circuit lines -->
+          <path d="M 310 75 Q 322 75 330 75" stroke="rgba(245,166,35,0.3)" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+          <path d="M 310 163 Q 322 163 330 163" stroke="rgba(26,91,181,0.35)" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+          <path d="M 310 250 Q 322 250 330 250" stroke="rgba(26,91,181,0.3)" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+
+          <!-- EHR logos row at bottom -->
+          <rect x="40" y="318" width="400" height="1" fill="rgba(26,91,181,0.1)"/>
+          <text x="40" y="345" font-family="'DM Sans', sans-serif" font-size="7.5" fill="rgba(240,246,255,0.3)" letter-spacing="0.5">COMPATIBLE WITH:</text>
+          <text x="120" y="345" font-family="'DM Sans', sans-serif" font-size="7.5" font-weight="600" fill="rgba(26,91,181,0.6)" letter-spacing="0.5">Athena · eCW · Tebra · AdvancedMD · DrChrono · SimplePractice · ICANotes · OfficeAlly</text>
+        </svg>
+
+
+
+      </div>
+
+      <!-- CONTENT SIDE -->
+      <div class="billing-content">
+        <span class="section-label">Medical Billing Services</span>
+        <h2 class="section-title" id="billing-title">We handle every<br><span style="color:var(--teal)">claim.</span> You focus on<br>patients.</h2>
+
+        <p class="section-sub" style="margin-bottom:0;">
+          Our billing team works as an extension of your practice — not a third-party vendor. We submit claims daily, verify every detail before submission, and maintain a 99% first-pass acceptance rate so you get paid faster with fewer delays and zero revenue leaks.
+        </p>
+
+        <!-- Key highlights grid -->
+        <div class="billing-highlights" role="list">
+          <div class="billing-highlight" role="listitem">
+            <span class="bh-icon">✅</span> 99% First-Pass Rate
+          </div>
+          <div class="billing-highlight" role="listitem">
+            <span class="bh-icon">📅</span> Daily Claim Submission
+          </div>
+          <div class="billing-highlight" role="listitem">
+            <span class="bh-icon">🖥️</span> All EHR Systems Supported
+          </div>
+          <div class="billing-highlight" role="listitem">
+            <span class="bh-icon">🔓</span> No Long-Term Commitment
+          </div>
+          <div class="billing-highlight" role="listitem">
+            <span class="bh-icon">💰</span> Only 3–5% of Collections
+          </div>
+          <div class="billing-highlight" role="listitem">
+            <span class="bh-icon">📊</span> Real-Time Reporting
+          </div>
+        </div>
+
+        <!-- Who we serve -->
+        <p style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem;">Who We Serve</p>
+        <div class="billing-who" role="list">
+          <div class="billing-who-item" role="listitem">
+            <span class="billing-who-icon">🩺</span>
+            <div>
+              <h5>Solo &amp; Independent Providers</h5>
+              <p>We handle your entire billing workflow so you can focus on patients — no in-house billing staff needed. Clean claims, fast payments.</p>
+            </div>
+          </div>
+          <div class="billing-who-item" role="listitem">
+            <span class="billing-who-icon">💻</span>
+            <div>
+              <h5>Telehealth &amp; Hybrid Practices</h5>
+              <p>Telehealth billing demands precision on payer rules and state-specific requirements. We guide every step for accurate, compliant reimbursement.</p>
+            </div>
+          </div>
+          <div class="billing-who-item" role="listitem">
+            <span class="billing-who-icon">🏥</span>
+            <div>
+              <h5>Multispecialty &amp; Integrated Clinics</h5>
+              <p>Precise handling of coding rules, modifiers, and taxonomy-based billing across every specialty — ensuring timely reimbursement under the correct NPI.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <a href="#quote" class="btn btn-primary">Get a Free Billing Review →</a>
+          <a href="tel:+15715358699" class="btn btn-outline">📞 Speak to a Specialist</a>
+        </div>
+
+        <p style="font-size:0.75rem;color:var(--white-mid);margin-top:1rem;">Onboarding completed in 3–5 business days · Covers all 50 states · Free credentialing included</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH INSURANCE -->
+<section class="health-section" id="health-insurance" aria-labelledby="health-title">
+  <div class="section-inner">
+    <div class="health-inner">
+
+      <!-- CONTENT SIDE -->
+      <div class="health-content">
+        <span class="section-label">Health Insurance Services</span>
+        <h2 class="section-title" id="health-title">What We Do</h2>
+
+        <div class="health-paras">
+          <div class="health-para">
+            <h5>Credentialing &amp; Payer Enrollment</h5>
+            <p>We provide comprehensive credentialing and payer enrollment services for healthcare providers and organizations, handling every step to ensure fast, accurate, and timely participation. From Medicare and Medicaid to commercial payers, we manage all administrative tasks so you can focus on patient care.</p>
+          </div>
+
+          <div class="health-para">
+            <h5>Medicare &amp; Medicaid Enrollment</h5>
+            <p>We handle the complete enrollment process for Medicare and Medicaid — from preparing and submitting applications to ensuring compliance, approvals, and timely participation so you can start seeing patients without delays.</p>
+          </div>
+        </div>
+
+        <!-- Coverage chips -->
+        <div class="health-chips" role="list">
+          <span class="health-chip" role="listitem">🏛️ Medicare</span>
+          <span class="health-chip" role="listitem">🏥 Medicaid</span>
+          <span class="health-chip" role="listitem">🤝 Commercial Payers</span>
+          <span class="health-chip" role="listitem">⚡ Fast Enrollment</span>
+          <span class="health-chip" role="listitem">✅ Compliance Handled</span>
+          <span class="health-chip" role="listitem">🩺 All Specialties</span>
+          <span class="health-chip" role="listitem">📋 CAQH Setup</span>
+          <span class="health-chip" role="listitem">🔄 Revalidation</span>
+        </div>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#quote" class="btn btn-primary">Get Enrolled Today →</a>
+          <a href="tel:+15715358699" class="btn btn-outline">📞 Speak to a Specialist</a>
+        </div>
+
+        <p style="font-size:0.75rem;color:var(--white-mid);margin-top:1rem;">
+          Enrollment in 15–45 days · All 50 states · Medicare, Medicaid &amp; 30+ commercial payers
+        </p>
+      </div>
+
+      <!-- IMAGE SIDE -->
+      <div class="health-img-wrap">
+        <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;" aria-hidden="true">
+          <defs>
+            <linearGradient id="hBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0a1628"/>
+              <stop offset="100%" stop-color="#050d1a"/>
+            </linearGradient>
+            <linearGradient id="hCard" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0f2040"/>
+              <stop offset="100%" stop-color="#071526"/>
+            </linearGradient>
+            <linearGradient id="hTeal" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2d8ef0"/>
+              <stop offset="100%" stop-color="#1e4d8c"/>
+            </linearGradient>
+            <linearGradient id="hAmber" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#f5a623"/>
+              <stop offset="100%" stop-color="#e8820c"/>
+            </linearGradient>
+            <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2d8ef0" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#0f2d5e" stop-opacity="0.7"/>
+            </linearGradient>
+            <filter id="hglow">
+              <feGaussianBlur stdDeviation="4" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="hShadow">
+              <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+            </filter>
+          </defs>
+
+          <!-- Background -->
+          <rect width="480" height="360" fill="url(#hBg)"/>
+
+          <!-- Grid pattern -->
+          <g opacity="0.07">
+            <line x1="0" y1="60" x2="480" y2="60" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="120" x2="480" y2="120" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="180" x2="480" y2="180" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="240" x2="480" y2="240" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="0" y1="300" x2="480" y2="300" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="80" y1="0" x2="80" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="160" y1="0" x2="160" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="240" y1="0" x2="240" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="320" y1="0" x2="320" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+            <line x1="400" y1="0" x2="400" y2="360" stroke="#1a5bb5" stroke-width="0.5"/>
+          </g>
+
+          <!-- Ambient glow -->
+          <ellipse cx="200" cy="180" rx="180" ry="130" fill="rgba(26,91,181,0.04)"/>
+
+          <!-- Main shield shape -->
+          <path d="M 155 55 L 265 55 L 265 185 Q 265 255 210 285 Q 155 255 155 185 Z"
+            fill="url(#shieldGrad)" opacity="0.15" filter="url(#hglow)"/>
+          <path d="M 155 55 L 265 55 L 265 185 Q 265 255 210 285 Q 155 255 155 185 Z"
+            fill="none" stroke="url(#hTeal)" stroke-width="2.5" opacity="0.8" filter="url(#hglow)"/>
+
+          <!-- Medical cross inside shield -->
+          <rect x="196" y="120" width="28" height="8" rx="4" fill="url(#hTeal)" filter="url(#hglow)"/>
+          <rect x="206" y="110" width="8" height="28" rx="4" fill="url(#hTeal)" filter="url(#hglow)"/>
+
+          <!-- Checkmark at bottom of shield -->
+          <polyline points="192,200 205,213 228,188" stroke="#1a5bb5" stroke-width="5"
+            fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#hglow)"/>
+
+          <!-- Stethoscope illustration -->
+          <!-- Tubing -->
+          <path d="M 270 90 Q 310 90 320 120 Q 330 150 310 165 Q 290 178 280 165 Q 270 152 285 142 Q 300 132 305 148"
+            stroke="url(#hTeal)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+          <!-- Chest piece circle -->
+          <circle cx="305" cy="158" r="18" fill="url(#hCard)" stroke="url(#hTeal)" stroke-width="3" opacity="0.9"/>
+          <circle cx="305" cy="158" r="10" fill="rgba(26,91,181,0.2)" stroke="url(#hTeal)" stroke-width="1.5"/>
+          <!-- Earpieces -->
+          <circle cx="268" cy="85" r="7" fill="none" stroke="url(#hTeal)" stroke-width="3" opacity="0.7"/>
+          <circle cx="285" cy="80" r="5" fill="none" stroke="url(#hTeal)" stroke-width="2.5" opacity="0.6"/>
+
+          <!-- Payer cards row -->
+          <!-- Medicare card -->
+          <rect x="55" y="200" width="110" height="65" rx="10" fill="url(#hCard)" stroke="rgba(26,91,181,0.3)" stroke-width="1.2" filter="url(#hShadow)"/>
+          <rect x="55" y="200" width="110" height="22" rx="10" fill="rgba(26,91,181,0.15)"/>
+          <rect x="55" y="214" width="110" height="8" rx="0" fill="rgba(26,91,181,0.15)"/>
+          <text x="110" y="216" font-family="Arial,sans-serif" font-weight="700" font-size="8" fill="#1a5bb5" text-anchor="middle" letter-spacing="0.5">MEDICARE</text>
+          <rect x="66" y="230" width="50" height="5" rx="2" fill="rgba(240,246,255,0.5)"/>
+          <rect x="66" y="241" width="35" height="4" rx="2" fill="rgba(240,246,255,0.25)"/>
+          <rect x="118" y="230" width="35" height="14" rx="4" fill="rgba(26,91,181,0.2)"/>
+          <text x="135" y="240" font-family="Arial,sans-serif" font-size="7" fill="#1a5bb5" text-anchor="middle" font-weight="600">✓ Active</text>
+
+          <!-- Medicaid card -->
+          <rect x="175" y="200" width="110" height="65" rx="10" fill="url(#hCard)" stroke="rgba(245,166,35,0.3)" stroke-width="1.2" filter="url(#hShadow)"/>
+          <rect x="175" y="200" width="110" height="22" rx="10" fill="rgba(245,166,35,0.12)"/>
+          <rect x="175" y="214" width="110" height="8" rx="0" fill="rgba(245,166,35,0.12)"/>
+          <text x="230" y="216" font-family="Arial,sans-serif" font-weight="700" font-size="8" fill="#f5a623" text-anchor="middle" letter-spacing="0.5">MEDICAID</text>
+          <rect x="186" y="230" width="50" height="5" rx="2" fill="rgba(240,246,255,0.5)"/>
+          <rect x="186" y="241" width="35" height="4" rx="2" fill="rgba(240,246,255,0.25)"/>
+          <rect x="238" y="230" width="35" height="14" rx="4" fill="rgba(245,166,35,0.2)"/>
+          <text x="255" y="240" font-family="Arial,sans-serif" font-size="7" fill="#f5a623" text-anchor="middle" font-weight="600">✓ Active</text>
+
+          <!-- Commercial card -->
+          <rect x="295" y="200" width="130" height="65" rx="10" fill="url(#hCard)" stroke="rgba(26,91,181,0.25)" stroke-width="1.2" filter="url(#hShadow)"/>
+          <rect x="295" y="200" width="130" height="22" rx="10" fill="rgba(26,91,181,0.1)"/>
+          <rect x="295" y="214" width="130" height="8" rx="0" fill="rgba(26,91,181,0.1)"/>
+          <text x="360" y="216" font-family="Arial,sans-serif" font-weight="700" font-size="8" fill="#1a5bb5" text-anchor="middle" letter-spacing="0.5">COMMERCIAL PAYERS</text>
+          <rect x="306" y="230" width="40" height="5" rx="2" fill="rgba(240,246,255,0.5)"/>
+          <rect x="306" y="241" width="60" height="4" rx="2" fill="rgba(240,246,255,0.25)"/>
+          <rect x="358" y="229" width="55" height="14" rx="4" fill="rgba(26,91,181,0.15)"/>
+          <text x="385" y="239" font-family="Arial,sans-serif" font-size="6.5" fill="#1a5bb5" text-anchor="middle" font-weight="600">30+ Payers</text>
+
+          <!-- Enrollment progress panel -->
+          <rect x="55" y="280" width="370" height="62" rx="10" fill="url(#hCard)" stroke="rgba(26,91,181,0.2)" stroke-width="1"/>
+          <text x="70" y="298" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(240,246,255,0.5)" letter-spacing="0.5" font-weight="600">ENROLLMENT PIPELINE</text>
+
+          <!-- Progress steps -->
+          <circle cx="90" cy="322" r="8" fill="rgba(26,91,181,0.9)"/>
+          <text x="90" y="326" font-family="Arial,sans-serif" font-size="8" fill="#050d1a" text-anchor="middle" font-weight="700">✓</text>
+          <line x1="98" y1="322" x2="148" y2="322" stroke="rgba(26,91,181,0.6)" stroke-width="2"/>
+
+          <circle cx="156" cy="322" r="8" fill="rgba(26,91,181,0.9)"/>
+          <text x="156" y="326" font-family="Arial,sans-serif" font-size="8" fill="#050d1a" text-anchor="middle" font-weight="700">✓</text>
+          <line x1="164" y1="322" x2="214" y2="322" stroke="rgba(26,91,181,0.6)" stroke-width="2"/>
+
+          <circle cx="222" cy="322" r="8" fill="rgba(26,91,181,0.9)"/>
+          <text x="222" y="326" font-family="Arial,sans-serif" font-size="8" fill="#050d1a" text-anchor="middle" font-weight="700">✓</text>
+          <line x1="230" y1="322" x2="280" y2="322" stroke="rgba(245,166,35,0.5)" stroke-width="2" stroke-dasharray="4 2"/>
+
+          <circle cx="288" cy="322" r="8" fill="rgba(245,166,35,0.4)" stroke="rgba(245,166,35,0.8)" stroke-width="1.5"/>
+          <text x="288" y="326" font-family="Arial,sans-serif" font-size="8" fill="#f5a623" text-anchor="middle" font-weight="700">4</text>
+          <line x1="296" y1="322" x2="346" y2="322" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-dasharray="4 2"/>
+
+          <circle cx="354" cy="322" r="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <text x="354" y="326" font-family="Arial,sans-serif" font-size="8" fill="rgba(240,246,255,0.4)" text-anchor="middle">5</text>
+          <line x1="362" y1="322" x2="405" y2="322" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-dasharray="4 2"/>
+
+          <circle cx="413" cy="322" r="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <text x="413" y="326" font-family="Arial,sans-serif" font-size="8" fill="rgba(240,246,255,0.4)" text-anchor="middle">6</text>
+
+          <!-- Step labels -->
+          <text x="90" y="340" font-family="Arial,sans-serif" font-size="6" fill="rgba(240,246,255,0.4)" text-anchor="middle">Apply</text>
+          <text x="156" y="340" font-family="Arial,sans-serif" font-size="6" fill="rgba(240,246,255,0.4)" text-anchor="middle">CAQH</text>
+          <text x="222" y="340" font-family="Arial,sans-serif" font-size="6" fill="rgba(240,246,255,0.4)" text-anchor="middle">Submit</text>
+          <text x="288" y="340" font-family="Arial,sans-serif" font-size="6" fill="#f5a623" text-anchor="middle">Review</text>
+          <text x="354" y="340" font-family="Arial,sans-serif" font-size="6" fill="rgba(240,246,255,0.3)" text-anchor="middle">Approve</text>
+          <text x="413" y="340" font-family="Arial,sans-serif" font-size="6" fill="rgba(240,246,255,0.3)" text-anchor="middle">Active</text>
+
+          <!-- Fast enrollment badge -->
+          <rect x="295" y="50" width="130" height="55" rx="10" fill="url(#hCard)" stroke="rgba(26,91,181,0.3)" stroke-width="1.2" filter="url(#hShadow)"/>
+          <text x="310" y="72" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(240,246,255,0.5)" letter-spacing="0.5">ENROLLMENT TIME</text>
+          <text x="310" y="95" font-family="Georgia,serif" font-weight="700" font-size="22" fill="url(#hTeal)">15-45</text>
+          <text x="385" y="95" font-family="Arial,sans-serif" font-size="9" fill="rgba(240,246,255,0.45)"> days</text>
+
+          <!-- Compliance badge -->
+          <rect x="295" y="120" width="130" height="55" rx="10" fill="url(#hCard)" stroke="rgba(245,166,35,0.25)" stroke-width="1.2" filter="url(#hShadow)"/>
+          <text x="310" y="142" font-family="Arial,sans-serif" font-size="7.5" fill="rgba(240,246,255,0.5)" letter-spacing="0.5">COMPLIANCE RATE</text>
+          <text x="310" y="165" font-family="Georgia,serif" font-weight="700" font-size="22" fill="url(#hAmber)">100%</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="news" id="news" aria-labelledby="news-title">
+  <div class="section-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:0;">
+      <div>
+        <span class="section-label">News & Tips</span>
+        <h2 class="section-title" id="news-title">Stay informed.<br>Stay protected.</h2>
+      </div>
+      <a href="#news" class="btn btn-outline" style="margin-bottom:0.5rem;">View All Articles →</a>
+    </div>
+
+    <div class="news-grid" role="list">
+      <article class="news-card" role="listitem">
+        <div class="news-img">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75&auto=format&fit=crop"
+            alt="Motorcycle on an open road"
+            loading="lazy"
+          >
+        </div>
+        <div class="news-body">
+          <span class="news-tag">Auto & Motorcycle</span>
+          <h4>Motorcycle Safety Tips Every Rider Should Know This Summer</h4>
+          <span class="news-date">June 5, 2026</span>
+        </div>
+      </article>
+
+      <article class="news-card" role="listitem">
+        <div class="news-img">
+          <img
+            src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=75&auto=format&fit=crop"
+            alt="Family camping with RV at a lake"
+            loading="lazy"
+          >
+        </div>
+        <div class="news-body">
+          <span class="news-tag">Recreation</span>
+          <h4>Top 5 RV Destinations Across the USA for 2026</h4>
+          <span class="news-date">June 3, 2026</span>
+        </div>
+      </article>
+
+      <article class="news-card" role="listitem">
+        <div class="news-img">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=75&auto=format&fit=crop"
+            alt="Beautiful residential home exterior"
+            loading="lazy"
+          >
+        </div>
+        <div class="news-body">
+          <span class="news-tag">Home Insurance</span>
+          <h4>Wildfire Season 2026: How to Protect Your Home Before It's Too Late</h4>
+          <span class="news-date">June 1, 2026</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners" aria-label="Insurance carrier partners">
+  <div class="section-inner">
+    <p class="partners-label">Our Insurance Carrier Partners</p>
+    <div class="partners-row" role="list">
+      <span class="partner-chip" role="listitem">Chubb</span>
+      <span class="partner-chip" role="listitem">Berkshire Hathaway</span>
+      <span class="partner-chip" role="listitem">Bristol West</span>
+      <span class="partner-chip" role="listitem">American Collectors</span>
+      <span class="partner-chip" role="listitem">Travelers</span>
+      <span class="partner-chip" role="listitem">Nationwide</span>
+      <span class="partner-chip" role="listitem">Lloyd's of London</span>
+      <span class="partner-chip" role="listitem">Liberty Mutual</span>
+      <span class="partner-chip" role="listitem">Hartford</span>
+      <span class="partner-chip" role="listitem">+21 More</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="section-inner">
+    <div style="text-align:center">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title" id="faq-title">Got questions?<br>We've got answers.</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
+          <span>What makes an independent broker better?</span>
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-a">Unlike agents tied to one company, we shop dozens of carriers simultaneously. You get unbiased recommendations and better rates — because we work for you, not the insurer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
+          <span>How fast can I get a quote?</span>
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-a">Most clients receive multiple competitive quotes within 24 hours. For standard auto and home, we often have options ready in under an hour.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
+          <span>Can I bundle multiple types of insurance?</span>
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-a">Absolutely — and you should. Bundling home, auto, and other policies typically saves clients 15–25%. Our brokers will show you exactly how much bundling saves you.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
+          <span>Does Zeen handle claims?</span>
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-a">Yes. We advocate for you throughout the claims process, liaise with your insurer, and make sure your claim is handled fairly and quickly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
+          <span>What is group insurance and who qualifies?</span>
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-a">Group insurance is offered through your employer, union, or association. Members receive exclusive rates unavailable to the public. Check if your organization is one of our 150+ partners.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
+          <span>Which states and provinces do you cover?</span>
+          <span class="faq-arrow" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-a">We are licensed across the United States including Virginia, California, Texas, Florida, New York, Nevada, Oregon, Washington, Georgia, and many more. Contact us to confirm your state.</div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip" aria-labelledby="cta-title">
+  <div class="section-inner">
+    <span class="section-label">Ready to Save?</span>
+    <h2 class="section-title" id="cta-title">Discover service that<br><span style="color:var(--teal)">revolves around you.</span></h2>
+    <p class="section-sub">Join over 50,000 clients who trust Zeen to protect their homes, vehicles, businesses, and families.</p>
+    <div class="cta-strip-actions">
+      <a href="#quote" class="btn btn-amber" style="font-size:1rem;padding:14px 32px;">Get My Free Quote →</a>
+      <a href="tel:+15715358699" class="btn btn-outline" style="font-size:1rem;padding:14px 32px;">📞 1-571-535-8699</a>
+      <a href="mailto:info@zeeninsurance.com" class="btn btn-outline" style="font-size:1rem;padding:14px 32px;">✉️ info@zeeninsurance.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="section-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+<a href="#" style="text-decoration:none;display:inline-flex;align-items:center;margin-bottom:1rem;" aria-label="Zeen Insurance">
+          <svg width="170" height="48" viewBox="0 0 180 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="globeGrad2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#4da8ff"/>
+                <stop offset="100%" stop-color="#1e4d8c"/>
+              </linearGradient>
+              <linearGradient id="zGrad2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="30%" stop-color="#7ab8ff"/>
+                <stop offset="65%" stop-color="#1a5bb5"/>
+                <stop offset="100%" stop-color="#0f2d5e"/>
+              </linearGradient>
+              <linearGradient id="orbitGrad2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#1a5bb5" stop-opacity="0"/>
+                <stop offset="40%" stop-color="#4da8ff"/>
+                <stop offset="100%" stop-color="#1a5bb5" stop-opacity="0.3"/>
+              </linearGradient>
+              <filter id="glow2"><feGaussianBlur stdDeviation="1.2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <circle cx="26" cy="26" r="19" stroke="url(#globeGrad2)" stroke-width="1.2" fill="none" opacity="0.85"/>
+            <ellipse cx="26" cy="26" rx="19" ry="7.5" stroke="url(#globeGrad2)" stroke-width="0.8" fill="none" opacity="0.5"/>
+            <ellipse cx="26" cy="19" rx="14" ry="4" stroke="url(#globeGrad2)" stroke-width="0.7" fill="none" opacity="0.35"/>
+            <ellipse cx="26" cy="33" rx="14" ry="4" stroke="url(#globeGrad2)" stroke-width="0.7" fill="none" opacity="0.35"/>
+            <ellipse cx="26" cy="26" rx="7" ry="19" stroke="url(#globeGrad2)" stroke-width="0.8" fill="none" opacity="0.4"/>
+            <line x1="26" y1="7" x2="26" y2="45" stroke="url(#globeGrad2)" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="26" cy="7" r="1.8" fill="#1a5bb5" opacity="0.9"/>
+            <circle cx="45" cy="26" r="1.8" fill="#1a5bb5" opacity="0.9"/>
+            <circle cx="26" cy="45" r="1.8" fill="#1a5bb5" opacity="0.9"/>
+            <circle cx="7" cy="26" r="1.8" fill="#1a5bb5" opacity="0.9"/>
+            <circle cx="39" cy="13" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+            <circle cx="39" cy="39" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+            <circle cx="13" cy="13" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+            <circle cx="13" cy="39" r="1.4" fill="#2d8ef0" opacity="0.75"/>
+            <ellipse cx="26" cy="26" rx="24" ry="9" stroke="url(#orbitGrad2)" stroke-width="2.5" fill="none" transform="rotate(-30 26 26)" stroke-linecap="round" opacity="0.95"/>
+            <polygon points="17,16 35,16 35,19.5 21.5,32.5 35,32.5 35,36 17,36 17,32.5 30.5,19.5 17,19.5" fill="url(#zGrad2)" opacity="1" stroke="rgba(26,91,181,0.4)" stroke-width="0.5"/>
+            <text x="54" y="22" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="17" letter-spacing="2" fill="#f0f6ff" id="zeen-wordmark-footer">ZEEN</text>
+            <text x="54" y="38" font-family="'DM Sans', Arial, sans-serif" font-weight="600" font-size="9.5" letter-spacing="4" fill="#1a5bb5">INSURANCE</text>
+          </svg>
+        </a>
+        <p>Independent insurance brokers dedicated to finding you the best coverage at the fairest price. Local roots. Nationwide reach.</p>
+        <p style="color:var(--teal);font-size:0.8rem;margin-top:0.5rem;">Licensed Across the US · 30+ Carriers</p>
+        <a href="mailto:info@zeeninsurance.com" style="display:inline-flex;align-items:center;gap:8px;color:rgba(240,246,255,0.75);font-size:0.85rem;text-decoration:none;margin-top:0.6rem;transition:color 0.2s;" onmouseover="this.style.color='#1a5bb5'" onmouseout="this.style.color='rgba(240,246,255,0.75)'">
+          ✉️ info@zeeninsurance.com
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Personal</h5>
+        <ul>
+          <li><a href="#quote">Auto Insurance</a></li>
+          <li><a href="#quote">Home Insurance</a></li>
+          <li><a href="#quote">Life Insurance</a></li>
+          <li><a href="#quote">Travel Insurance</a></li>
+          <li><a href="#quote">Renters Insurance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Business & Recreation</h5>
+        <ul>
+          <li><a href="#quote">Business Insurance</a></li>
+          <li><a href="#quote">Commercial Auto</a></li>
+          <li><a href="#quote">Motorcycle</a></li>
+          <li><a href="#quote">RV & Motorhome</a></li>
+          <li><a href="#quote">Boat & Marine</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#group">Group Insurance</a></li>
+          <li><a href="#news">News & Tips</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#quote">Claims Support</a></li>
+          <li><a href="#quote">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Zeen Insurance Services. All rights reserved. | <a href="#" style="color:var(--white-mid);text-decoration:none;">Privacy Policy</a> | <a href="#" style="color:var(--white-mid);text-decoration:none;">Terms</a></p>
+      <div class="footer-socials" aria-label="Social media links">
+        <a href="https://www.facebook.com/share/19Bebeoj9C/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-btn" aria-label="Zeen Insurance on Facebook">f</a>
+        <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-cta-bar" role="complementary" aria-label="Quick actions">
+  <a href="tel:+15715358699" class="btn btn-outline" aria-label="Call us">📞 Call</a>
+  <a href="#quote" class="btn btn-amber">Get Free Quote</a>
+</div>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  /* ── hamburger ── */
+  const hamBtn = document.getElementById('ham-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.style.display === 'block';
+    mobileMenu.style.display = isOpen ? 'none' : 'block';
+    hamBtn.setAttribute('aria-expanded', !isOpen);
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  });
+  function closeMobile() {
+    mobileMenu.style.display = 'none';
+    hamBtn.setAttribute('aria-expanded', false);
+    document.body.style.overflow = '';
+  }
+
+  /* ── tabs ── */
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected','false');
+    });
+    document.querySelectorAll('.coverage-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+    document.getElementById('tab-' + id).classList.add('active');
+  }
+
+  /* ── FAQ ── */
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if (!wasOpen) {
+      item.classList.add('open');
+      el.setAttribute('aria-expanded','true');
+    }
+  }
+
+  // Keyboard support for FAQ
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(q); }
+    });
+  });
+
+  /* ── testimonials drag scroll ── */
+  const track = document.getElementById('testi-track');
+  let isDown = false, startX, scrollLeft;
+  track.addEventListener('mousedown', e => {
+    isDown = true; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft;
+  });
+  track.addEventListener('mouseleave', () => isDown = false);
+  track.addEventListener('mouseup', () => isDown = false);
+  track.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+
+  /* ── scroll to top ── */
+  const scrollBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  /* ── quote form → Formspree ── */
+  async function submitQuote() {
+    const type     = document.getElementById('ins-type').value;
+    const zip      = document.getElementById('zip').value.trim();
+    const name     = document.getElementById('name').value.trim();
+    const phone    = document.getElementById('phone').value.trim();
+    const btn      = document.getElementById('quote-submit-btn');
+    const feedback = document.getElementById('quote-feedback');
+
+    // Basic validation
+    if (!type)  { showFeedback('⚠️ Please select an insurance type.', 'warn'); return; }
+    if (!name)  { showFeedback('⚠️ Please enter your name.', 'warn'); return; }
+    if (!phone) { showFeedback('⚠️ Please enter your phone number.', 'warn'); return; }
+
+    // Loading state
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const response = await fetch('https://formspree.io/f/xzdnpllq', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          'Insurance Type': type,
+          'ZIP Code':       zip,
+          'Full Name':      name,
+          'Phone Number':   phone,
+          '_subject':       `New Quote Request — ${type} — ${name}`,
+          '_replyto':       'info@zeeninsurance.com'
+        })
+      });
+
+      if (response.ok) {
+        showFeedback(`✅ Thank you, ${name}! We'll call you within 24 hours about your ${type}.`, 'success');
+        // Reset form fields
+        ['ins-type','zip','name','phone'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.value = '';
+        });
+        btn.textContent = 'Submitted ✓';
+        btn.style.background = '#16a34a';
+        setTimeout(() => {
+          btn.textContent = 'Get My Free Quote →';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 5000);
+      } else {
+        const data = await response.json();
+        const errMsg = data.errors ? data.errors.map(e => e.message).join(', ') : 'Submission failed.';
+        showFeedback(`❌ ${errMsg} — Please call us at 1-571-535-8699.`, 'error');
+        btn.textContent = 'Get My Free Quote →';
+        btn.disabled = false;
+      }
+    } catch (err) {
+      showFeedback('❌ Network error. Please call us at 1-571-535-8699.', 'error');
+      btn.textContent = 'Get My Free Quote →';
+      btn.disabled = false;
+    }
+  }
+
+  function showFeedback(msg, type) {
+    const el = document.getElementById('quote-feedback');
+    el.textContent = msg;
+    el.style.display = 'block';
+    el.style.background = type === 'success'
+      ? 'rgba(22,163,74,0.15)'  : type === 'error'
+      ? 'rgba(220,38,38,0.15)'  : 'rgba(26,91,181,0.12)';
+    el.style.border = type === 'success'
+      ? '1px solid rgba(22,163,74,0.4)'  : type === 'error'
+      ? '1px solid rgba(220,38,38,0.4)'  : '1px solid rgba(26,91,181,0.3)';
+    el.style.color = type === 'success' ? '#86efac'
+      : type === 'error' ? '#fca5a5' : '#93c5fd';
+    // Auto-hide warnings after 4s
+    if (type === 'warn') setTimeout(() => { el.style.display = 'none'; }, 4000);
+  }
+
+  /* ── smooth nav link close on resize ── */
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMobile();
+  }, { passive: true });
+
+  /* ── theme toggle ── */
+  const themeBtn = document.getElementById('theme-btn');
+  const savedTheme = localStorage.getItem('zeen-theme') || 'light';
+
+  function applyTheme(isLight) {
+    // Logo ZEEN text colour
+    // Nav logo: navy in light mode, white in dark mode
+    const navZeen = document.querySelector('#zeen-wordmark');
+    if (navZeen) navZeen.setAttribute('fill', isLight ? '#0a1628' : '#f0f6ff');
+    // update INSURANCE subtext to blue
+    const insTexts = document.querySelectorAll('.nav-logo svg text:last-of-type');
+    insTexts.forEach(t => t.setAttribute('fill', '#1a5bb5'));
+    // Footer logo: always stays white — footer background is always dark navy
+    const footerZeen = document.querySelector('#zeen-wordmark-footer');
+    if (footerZeen) footerZeen.setAttribute('fill', '#f0f6ff');
+    // INSURANCE subtext stays teal either way — fine
+    themeBtn.textContent = isLight ? '☀️' : '🌙';
+  }
+
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+    applyTheme(true);
+  } else {
+    applyTheme(false);
+  }
+
+  themeBtn.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light-theme');
+    applyTheme(isLight);
+    localStorage.setItem('zeen-theme', isLight ? 'light' : 'dark');
+  });
+</script>
+</body>
+</html>
